@@ -35,3 +35,19 @@
 .app-enter-header-name .my-info {
   padding-left: 1rem;
 }
+.app-enter-header-name .app-choose {
+  font-size: 0.93333333rem;
+}
+.app-jigou-message {
+  height: auto;
+}
+.app-jigou-message textarea {
+  margin: 0;
+}
+.app-jigou-message #app-camera img {
+  width: 2rem;
+  height: 2rem;
+}
+.app-jigou-message .app-images > img {
+  width: 2rem;
+}

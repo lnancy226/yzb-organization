@@ -5,7 +5,7 @@
 $(function () {
     //mui初始化
     mui.init({
-        swipeBack: true //启用右滑关闭功能
+        // swipeBack: true //启用右滑关闭功能
     });
 
     var inpArr = document.getElementsByClassName("prompt-btn");
@@ -26,9 +26,37 @@ $(function () {
                 if (e.index === 1) {
                     infoArr[_this.index].innerText =  e.value;
                 }
-            })
+            });
+            if(this.index === 2) {
+                $('.mui-popup-input input').attr("type","tel");
+            };
             $('.mui-popup-title').remove();
         });
     }
 
+    // mui('.mui-scroll-wrapper').scroll();
+
+});
+$(function () {
+    //点击调取照片
+    $("#app-camera").on("tap",function(){
+        $("#app-upload-img").click();
+    });
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                console.log(e.target.result);
+                $('#blah').attr('src', e.target.result);
+            };
+            //render是渲染的意思
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#app-upload-img").change(function(){
+        readURL(this);
+    });
+    $(".cancel-img").on("tap",function(){
+        $(this).parent("div").remove();
+    })
 })

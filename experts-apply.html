@@ -5,6 +5,9 @@
     <title>专家入驻</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=no">
     <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/mui.picker.css">
+    <link rel="stylesheet" href="./css/mui.poppicker.css">
+
     <link rel="stylesheet" href="./css/jigou-enter.css">
     <link rel="stylesheet" href="./css/apply.css">
 </head>
@@ -81,8 +84,12 @@
         <!--</div>-->
     <!--</div>-->
 </div>
-<script src="js/jquery.min.js"></script>
+<script src="./js/jquery.min.js"></script>
 <script src="./js/mui.min.js"></script>
+<script src="./js/mui.picker.js"></script>
+<script src="./js/mui.poppicker.js"></script>
+<script src="./js/city.data-3.js"></script>
+
 <script src="./src/apply.js"></script>
 <script>
     $(function(){
@@ -102,26 +109,7 @@
         //第一次没有加[0]，点击没有反应，注意获取class时候一个数组，不能给数组添加事件
         //第三个参数表示是否使用捕获，true表示事件是捕获阶段，false表示事件是冒泡阶段
 //        $(".pop-ensure")[0].addEventListener("click",popMenu,false);
-        //点击调取照片
-        $("#app-camera").click(function(){
-            $("#app-upload-img").click();
-        });
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#blah').attr('src', e.target.result);
-                };
-                //render是渲染的意思
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-        $("#app-upload-img").change(function(){
-            readURL(this);
-        });
-        $(".cancel-img").click(function(){
-            $(this).parent("div").remove();
-        })
+
     })
 </script>
 </body>
