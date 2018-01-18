@@ -1,0 +1,52 @@
+//清除浏览器默认样式
+//@import './reset.less';
+//兼容各个移动端浏览器样式
+//@import './normalize.less';
+//引入公共样式文件
+@import './common.less';
+
+//750px/25 = 30
+html {
+  background-color: #fff;
+}
+
+.mui-content {
+  background-color: #fff;
+
+  .app-menu {
+    margin-top: (30rem/30);
+    .my-icon {
+      img {
+        width: (120rem/30);
+      }
+    }
+
+    .mui-grid-view.mui-grid-9 .mui-table-view-cell {
+      padding: 0;
+      border: 0;
+    }
+
+    .mui-grid-view.mui-grid-9 {
+      background-color: #fff;
+      border: 0;
+    }
+  }
+
+  .apply-enter {
+    width: (350rem/30);
+    height: (90rem/30);
+    line-height: (90rem/30);
+    border-radius: (8rem/30);
+    margin: (140rem/30) auto;
+    background: #d04424 url("../img/apply-enter-icon.png") no-repeat (58rem/30) (24rem/30);
+    background-size: (39rem/30) (45rem/30);
+    padding-left: (125rem/30);
+
+    a {
+      color: #fff;
+      font-size: (36rem/30);
+    }
+  }
+}
+
+

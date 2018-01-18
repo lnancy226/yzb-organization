@@ -1,0 +1,68 @@
+/*** 公共样式文件 ***/
+@media screen and (width: 320px) {
+  html {
+    font-size: 12.8px;
+  }
+}
+@media screen and (width: 360px) {
+  html {
+    font-size: 14.4px;
+  }
+}
+@media screen and (width: 375px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (width: 414px) {
+  html {
+    font-size: 16.56px;
+  }
+}
+.mui-content {
+  background-color: #eee;
+}
+/* header */
+.mui-bar-nav {
+  background-color: #fff;
+}
+.mui-action-back {
+  color: #333;
+}
+.back {
+  font-size: 17px;
+}
+html {
+  background-color: #fff;
+}
+.mui-content {
+  background-color: #fff;
+}
+.mui-content .app-menu {
+  margin-top: 1rem;
+}
+.mui-content .app-menu .my-icon img {
+  width: 4rem;
+}
+.mui-content .app-menu .mui-grid-view.mui-grid-9 .mui-table-view-cell {
+  padding: 0;
+  border: 0;
+}
+.mui-content .app-menu .mui-grid-view.mui-grid-9 {
+  background-color: #fff;
+  border: 0;
+}
+.mui-content .apply-enter {
+  width: 11.66666667rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 0.26666667rem;
+  margin: 4.66666667rem auto;
+  background: #d04424 url("../img/apply-enter-icon.png") no-repeat 1.93333333rem 0.8rem;
+  background-size: 1.3rem 1.5rem;
+  padding-left: 4.16666667rem;
+}
+.mui-content .apply-enter a {
+  color: #fff;
+  font-size: 1.2rem;
+}

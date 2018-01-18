@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=no">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="css/swiper.min.css">-->
+    <link rel="stylesheet" href="css/index.css">
+    <title>机构入驻</title>
+    <style>
+
+        #info {
+            padding: 20px 10px;
+        }
+
+        /*p {*/
+            /*text-indent: 22px;*/
+        /*}*/
+
+        /*.app-menu a {*/
+            /*display: block;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="appContent">
+    <!--<div class="app-header">-->
+    <!--<div class="app-back">返回</div>-->
+    <!--<span class="app-title">机构</span>-->
+    <!--</div>-->
+    <header id="header" class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span class="back">返回</span></a>
+        <h1 class="mui-title">机构</h1>
+        <!--<a href="./experts-apply.html" class="mui-btn mui-btn-link mui-pull-right">我要入驻</a>-->
+    </header>
+    <!--<div class="app-banner"><img src="img/app-banner.png" alt=""></div>-->
+    <div class="mui-content">
+        <div id="slider" class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="./img/banner-3.jpg">
+                    </a>
+                </div>
+                <!-- 第一张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="./img/banner-1.jpg">
+                    </a>
+                </div>
+                <!-- 第二张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="img/banner-2.jpg">
+                    </a>
+                </div>
+                <!-- 第三张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="img/banner-3.jpg">
+                    </a>
+                </div>
+                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="img/banner-1.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+        </div>
+        <div class="app-menu">
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                    <div class="my-icon"><img src="img/app-jianding-icon.png" alt=""></div>
+                    <div class="mui-media-body">鉴定</div>
+                </a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                    <div class="my-icon"><img src="img/app-diandang-icon.png" alt=""></div>
+                    <div class="mui-media-body">典当</div>
+                </a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                    <div class="my-icon"><img src="img/app-paimai-icon.png" alt=""></div>
+                    <div class="mui-media-body">拍卖</div>
+                </a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                    <div class="my-icon"><img src="img/app-xiehui-icon.png" alt=""></div>
+                    <div class="mui-media-body">协会</div>
+                </a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                    <div class="my-icon"><img src="img/app-zhanlan-icon.png" alt=""></div>
+                    <div class="mui-media-body">展览</div>
+                </a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                    <div class="my-icon"><img src="img/app-xuexiao-icon.png" alt=""></div>
+                    <div class="mui-media-body">学校</div>
+                </a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                    <div class="my-icon"><img src="img/app-museum-icon.png" alt=""></div>
+                    <div class="mui-media-body">博物馆</div>
+                </a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                    <div class="my-icon"><img src="img/app-zhuanjia-icon.png" alt=""></div>
+                    <div class="mui-media-body">专家</div>
+                </a></li>
+            </ul>
+        </div>
+        <div class="mui-content-padded">
+            <div class="apply-enter"><a href="#picture">我要入驻</a>
+            </div>
+            <p id="info"></p>
+        </div>
+    </div>
+
+    <div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a href="#">机构入驻</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#">专家入驻</a>
+            </li>
+        </ul>
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a href="#picture"><b>取消</b></a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/mui.min.js"></script>
+<script src="./src/organization.js"></script>
+<script>
+//    mui.init({
+//        swipeBack: true //启用右滑关闭功能
+//    });
+//    var slider = mui("#slider");
+//    slider.slider({
+//        interval: 5000
+//    });
+</script>
+</body>
+</html>

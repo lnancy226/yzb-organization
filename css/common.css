@@ -1,0 +1,34 @@
+/*** 公共样式文件 ***/
+@media screen and (width: 320px) {
+  html {
+    font-size: 12.8px;
+  }
+}
+@media screen and (width: 360px) {
+  html {
+    font-size: 14.4px;
+  }
+}
+@media screen and (width: 375px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (width: 414px) {
+  html {
+    font-size: 16.56px;
+  }
+}
+.mui-content {
+  background-color: #eee;
+}
+/* header */
+.mui-bar-nav {
+  background-color: #fff;
+}
+.mui-action-back {
+  color: #333;
+}
+.back {
+  font-size: 17px;
+}
