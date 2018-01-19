@@ -51,3 +51,41 @@
 .app-jigou-message .app-images > img {
   width: 2rem;
 }
+.app-images {
+  margin: 0 0.8rem;
+}
+.mui-poppicker-header {
+  background-color: #d04424;
+  height: 2.66666667rem;
+  line-height: 2.66666667rem;
+  padding: 0 6px;
+}
+.mui-poppicker-header .mui-btn {
+  border: 0;
+  background-color: #d04424;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.mui-picker {
+  background-color: #fff;
+}
+/*** 机构入驻 ***/
+#app-detail-address {
+  height: auto;
+}
+.app-jigou-jianjie {
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+}
+#detail-address {
+  margin-bottom: 0;
+}
+#app-camera {
+  margin: 0;
+}
+.app-jigou-message {
+  padding: 0.8rem;
+}
+.app-jigou-message textarea {
+  padding: 0;
+}

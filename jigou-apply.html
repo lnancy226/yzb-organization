@@ -5,64 +5,75 @@
     <title>机构入驻申请</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=no">
     <link rel="stylesheet" href="./css/mui.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/jigou-enter.css">
+    <link rel="stylesheet" href="./css/mui.picker.css">
+    <link rel="stylesheet" href="./css/mui.poppicker.css">
+
+    <link rel="stylesheet" href="./css/jigou-enter.css">
+    <link rel="stylesheet" href="./css/apply.css">
 </head>
 <body>
 <div class="appContent">
-    <div class="app-header">
-        <div class="app-back">返回</div>
-        <span class="app-title">机构入驻</span>
+    <!--<div class="app-header">-->
+        <!--<div class="app-back">返回</div>-->
+        <!--<span class="app-title">机构入驻</span>-->
+    <!--</div>-->
+    <header id="header" class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span class="back">返回</span></a>
+        <h1 class="mui-title">机构入驻</h1>
+        <!--<a href="./experts-apply.html" class="mui-btn mui-btn-link mui-pull-right">我要入驻</a>-->
+    </header>
+    <div class="mui-content">
+        <div class="app-enter-header">
+            <div class="app-enter-header-name prompt-btn">
+                <div><span class="inp-type">机构名称</span><span class="my-info"></span></div>
+                <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
+                <br style="clear: both">
+            </div>
+            <div class="app-enter-header-name">
+                <div>门头照片</div>
+                <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
+                <br style="clear: both">
+            </div>
+        </div>
+        <div class="app-enter-header">
+            <div class="app-enter-header-name prompt-btn">
+                <div><span class="inp-type">组织代码</span><span class="my-info"></span></div>
+                <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
+                <br style="clear: both">
+            </div>
+            <div class="app-enter-header-name" id='showTypePicker'>
+                <div>所属类型  &nbsp;&nbsp;<span id='typeResult'></span></div>
+                <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
+                <div class="app-choose">请选择</div>
+                <br style="clear: both">
+            </div>
+            <div class="app-enter-header-name prompt-btn">
+                <div><span class="inp-type">联系人</span>&nbsp;&nbsp;&nbsp;<span class="my-info"></span></div>
+                <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
+                <br style="clear: both">
+            </div>
+            <div class="app-enter-header-name prompt-btn">
+                <div><span class="inp-type">联系方式</span><span class="my-info"></span></div>
+                <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
+                <br style="clear: both">
+            </div>
+            <div class="app-enter-header-name jigou-jieshao-area" id='showCityPicker3'>
+                <div>所在地区  &nbsp;&nbsp;<span id='cityResult3'></span></div>
+                <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
+                <div class="app-choose">请选择</div>
+                <br style="clear: both">
+            </div>
+            <div id="app-detail-address"><textarea name="address" id="detail-address" cols="30" rows="2" placeholder="请填写详细地址"></textarea></div>
+        </div>
+        <div class="app-jigou-jianjie">机构简介</div>
+        <div class="app-jigou-message app-jigou-apply-message">
+            <textarea name="" id="" cols="30" rows="4" placeholder="请输入机构简介"></textarea><br>
+            <input id="app-upload-img" type="file" accept="image/*" capture="camera" multiple>
+            <div id="app-camera"><img src="img/app-camera-add.png" alt="" style="width: 60px;height:60px;"></div>
+        </div>
+        <div class="app-submit">提交</div>
     </div>
-    <div class="app-enter-header">
-        <div class="app-enter-header-name">
-            <div>机构名称</div>
-            <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
-            <br style="clear: both">
-        </div>
-        <div class="app-enter-header-name">
-            <div>门头照片</div>
-            <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
-            <br style="clear: both">
-        </div>
-    </div>
-    <div class="app-enter-header">
-        <div class="app-enter-header-name">
-            <div>组织代码</div>
-            <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
-            <br style="clear: both">
-        </div>
-        <div class="app-enter-header-name">
-            <div>所属类型</div>
-            <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
-            <div class="app-choose">请选择</div>
-            <br style="clear: both">
-        </div>
-        <div class="app-enter-header-name">
-            <div>联系人</div>
-            <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
-            <br style="clear: both">
-        </div>
-        <div class="app-enter-header-name">
-            <div>联系方式</div>
-            <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
-            <br style="clear: both">
-        </div>
-        <div class="app-enter-header-name jigou-jieshao-area">
-            <div>所在地区</div>
-            <div class="app-rightArrow"><img src="img/rightArrow.png" alt=""></div>
-            <div class="app-choose">请选择</div>
-            <br style="clear: both">
-        </div>
-        <div id="app-detail-address"><textarea name="address" id="detail-address" cols="30" rows="3" placeholder="请填写详细地址"></textarea></div>
-    </div>
-    <div class="app-jigou-jianjie">机构简介</div>
-    <div class="app-jigou-message app-jigou-apply-message">
-        <textarea name="" id="" cols="30" rows="4" placeholder="请输入机构简介"></textarea><br>
-        <input id="app-upload-img" type="file" accept="image/*" capture="camera" multiple>
-        <div id="app-camera"><img src="img/app-camera-add.png" alt="" style="width: 60px;height:60px;"></div>
-    </div>
-    <div class="app-submit">提交</div>
+
 </div>
 <div class="shade"></div>
 <div class="pop-menu">
@@ -73,21 +84,27 @@
         <div class="pop-ensure">确定</div>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
-<script>
-    $(function(){
-        $(".app-choose").click(function(){
-            $(".shade").show();
-            $(".pop-menu").show();
-            $(".pop-input").focus();
-        });
-        $(".pop-cancel").click(function(){
-            $(".shade").hide();
-            $(".pop-menu").hide();
-        });
+<script src="./js/jquery.min.js"></script>
+<script src="./js/mui.min.js"></script>
+<script src="./js/mui.picker.js"></script>
+<script src="./js/mui.poppicker.js"></script>
+<script src="./js/city.data-3.js"></script>
 
-        $('input').focus();
-    })
+<script src="src/orgApply.js"></script>
+<script>
+//    $(function(){
+//        $(".app-choose").click(function(){
+//            $(".shade").show();
+//            $(".pop-menu").show();
+//            $(".pop-input").focus();
+//        });
+//        $(".pop-cancel").click(function(){
+//            $(".shade").hide();
+//            $(".pop-menu").hide();
+//        });
+//
+//        $('input').focus();
+//    })
 </script>
 </body>
 </html>
