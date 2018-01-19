@@ -19,8 +19,12 @@
     font-size: 16.56px;
   }
 }
+html {
+  background-color: #eee;
+}
 .mui-content {
   background-color: #eee;
+  margin-bottom: 0.66666667rem;
 }
 /* header */
 .mui-bar-nav {

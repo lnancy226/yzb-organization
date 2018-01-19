@@ -1,50 +1,57 @@
 /*** 公共样式文件 ***/
-
-// 适配的媒体查询
 @media screen and (width: 320px) {
   html {
-    font-size: 320px/25;
+    font-size: 12.8px;
   }
 }
-
 @media screen and (width: 360px) {
   html {
-    font-size: 360px/25;
+    font-size: 14.4px;
   }
 }
-
 @media screen and (width: 375px) {
   html {
-    font-size: 375px/25;
+    font-size: 15px;
   }
 }
-
 @media screen and (width: 414px) {
   html {
-    font-size: 414px/25;
+    font-size: 16.56px;
   }
 }
-
 html {
   background-color: #eee;
 }
-
 .mui-content {
   background-color: #eee;
-  margin-bottom: (20rem/30);
+  margin-bottom: 0.66666667rem;
 }
-
 /* header */
 .mui-bar-nav {
   background-color: #fff;
 }
-
- //返回
 .mui-action-back {
   color: #333;
 }
-
 .back {
   font-size: 17px;
 }
-
+.app-jigou-message {
+  height: auto;
+  padding: 0.8rem;
+}
+.app-jigou-img {
+  padding: 0;
+  float: none;
+  text-align: center;
+  margin: 1rem 0;
+}
+.app-jigou-img img {
+  width: 10.33333333rem;
+}
+.app-jigou-img img:first-child {
+  margin-right: 1rem;
+}
+#app-camera {
+  margin: 0;
+}
