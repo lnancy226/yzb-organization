@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=yes"/>
     <title>专家信息</title>
     <link rel="stylesheet" href="./css/mui.min.css">
     <link rel="stylesheet" href="./css/jigou-enter.css">
@@ -20,7 +21,7 @@
     </header>
     <div class="mui-content">
         <div class="app-jigou-detial">
-            <div class="consult-now">立即咨询</div>
+            <div class="consult-now"><a href="#">立即咨询</a></div>
             <div class="app-jigou-name">李小小</div>
             <div class="app-detial-list"><span>身份:</span><span class="organization">&nbsp;珠宝专家</span></div>
             <div class="app-detial-list"><span>任职机构:</span><span class="contact-man">&nbsp;缘之宝</span></div>
@@ -34,9 +35,14 @@
             <img src="img/jigou2.png" alt="" >
         </div>
         <div class="app-jigou-message">
+            <form id="form1" runat="server">
             <textarea name="" id="" cols="30" rows="3" placeholder="请输入留言..."></textarea><br>
-            <input id="app-upload-img" type="file" accept="image/*" capture="camera" multiple>
-            <div id="app-camera"><img src="img/app-camera.png" alt="" style="width: 60px;height:60px;"></div>
+            <input id="app-upload-img" type="file" accept="image/*" multiple>
+            <div id="app-camera" onclick="getElementById('app-upload-img').click()"><img src="img/app-camera.png" alt="" style="width: 60px;height:60px;"></div>
+            <div>
+                <img id="blah" src="#" alt="显示您上传的商品图片" />
+            </div>
+            </form>
         </div>
         <div class="sendMessage-box">
             <div class="sendMessage">发送留言</div>
@@ -46,5 +52,21 @@
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="./js/mui.min.js"></script>
+<script src="./src/experts-detail.js"></script>
+<script>
+//    展示上传的照片
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#imgInp").change(function() {
+        readURL(this);
+    });
+</script>
 </body>
 </html>

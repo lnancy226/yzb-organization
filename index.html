@@ -78,35 +78,35 @@
         </div>
         <div class="app-menu">
             <ul class="mui-table-view mui-grid-view mui-grid-9">
-                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="./jigou-list.html">
                     <div class="my-icon"><img src="img/app-jianding-icon.png" alt=""></div>
                     <div class="mui-media-body">鉴定</div>
                 </a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="./jigou-list.html">
                     <div class="my-icon"><img src="img/app-diandang-icon.png" alt=""></div>
                     <div class="mui-media-body">典当</div>
                 </a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="./jigou-list.html">
                     <div class="my-icon"><img src="img/app-paimai-icon.png" alt=""></div>
                     <div class="mui-media-body">拍卖</div>
                 </a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="./jigou-list.html">
                     <div class="my-icon"><img src="img/app-xiehui-icon.png" alt=""></div>
                     <div class="mui-media-body">协会</div>
                 </a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="./jigou-list.html">
                     <div class="my-icon"><img src="img/app-zhanlan-icon.png" alt=""></div>
                     <div class="mui-media-body">展览</div>
                 </a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="./jigou-list.html">
                     <div class="my-icon"><img src="img/app-xuexiao-icon.png" alt=""></div>
                     <div class="mui-media-body">学校</div>
                 </a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="./jigou-list.html">
                     <div class="my-icon"><img src="img/app-museum-icon.png" alt=""></div>
                     <div class="mui-media-body">博物馆</div>
                 </a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="./experts-list.html">
                     <div class="my-icon"><img src="img/app-zhuanjia-icon.png" alt=""></div>
                     <div class="mui-media-body">专家</div>
                 </a></li>
@@ -147,6 +147,9 @@
 //    slider.slider({
 //        interval: 5000
 //    });
+mui('.app-menu li').on('tap','a',function(){
+    window.top.location.href=this.href;
+});
 </script>
 </body>
 </html>
