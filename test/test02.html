@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./bootstrap-table/src/bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap-table/src/bootstrap-table.css">
+</head>
+
+<body>
+  <h1>方式1</h1>
+  <table data-toggle="table">
+    <thead>
+      <tr>
+        <th>Item ID</th>
+        <th>Item Name</th>
+        <th>Item Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Item 1</td>
+        <td>$1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Item 2</td>
+        <td>$2</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>方式2</h1>
+  <table data-toggle="table" data-url="data1.json">
+    <thead>
+      <tr>
+        <th data-field="id">Item ID</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="price">Item Price</th>
+      </tr>
+    </thead>
+  </table>
+
+
+  <h1>方式3</h1>
+  <table id="table"></table>
+
+  <script src="./bootstrap-table/src/jquery.min.js"></script>
+  <script src="./bootstrap-table/src/bootstrap.min.js"></script>
+  <script src="./bootstrap-table/src/bootstrap-table.js"></script>
+  <!-- put your locale files after bootstrap-table.js -->
+  <script src="./bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
+
+  <script>
+    $('#table').bootstrapTable({
+      columns: [{
+        field: 'id',
+        title: 'Item ID'
+      }, {
+        field: 'name',
+        title: 'Item Name'
+      }, {
+        field: 'price',
+        title: 'Item Price'
+      }],
+      data: [{
+        id: 1,
+        name: 'Item 1',
+        price: '$1'
+      }, {
+        id: 2,
+        name: 'Item 2',
+        price: '$2'
+      }]
+    });
+  </script>
+</body>
+
+</html>

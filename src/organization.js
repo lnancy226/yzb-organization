@@ -37,6 +37,6 @@ $(function () {
     // 轮播图
     var slider = mui("#slider");
     slider.slider({
-        interval: 5000
+        interval: 2000
     });
 })

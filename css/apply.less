@@ -46,7 +46,24 @@
     border: 0;
     background-color: #d04424;
     font-size: (42rem/30);
-    color: #fff;
+    color: #d04424;
+    margin-top: (20rem/30);
+  }
+
+  .mui-poppicker-btn-cancel {
+    background: url(../img/cancel.png) no-repeat 0 0;
+    background-size: (34rem/30) (34rem/30);
+    width: (34rem/30);
+    height: (34rem/30);
+    margin-left: (15rem/30);
+  }
+
+  .mui-poppicker-btn-ok {
+    width: (56rem/30);
+    height: (38rem/30);
+    background: url(../img/conform.png) no-repeat 0 0;
+    background-size: (56rem/30) (38rem/30);
+    margin-right: (15rem/30);
   }
 }
 
@@ -55,12 +72,17 @@
 }
 
 /*** 机构入驻 ***/
+.app-enter-header-name {
+  font-size: (32rem/30);
+}
+
 #app-detail-address {
   height: auto;
 }
 .app-jigou-jianjie {
   height: (100rem/30);
   line-height: (100rem/30);
+  font-size: (32rem/30);
 }
 
 #detail-address {
@@ -69,7 +91,20 @@
 }
 
 #app-camera {
+  position: relative;
   margin: 0;
+  width: auto;
+  height: auto;
+}
+
+#blah {
+  position: absolute;
+  right: (85rem/30);
+  top: (8rem/30);
+  //width: (80rem/30);
+  height: (68rem/30);
+  width: auto;
+
 }
 
 .app-jigou-message {
@@ -79,3 +114,29 @@
 .app-jigou-message textarea {
   padding: 0;
 }
+
+.app-submit {
+  width: 100%;
+  height: (100rem/30);
+  line-height: (100rem/30);
+  font-size: (36rem/30);
+  margin-bottom: (50rem/30);
+}
+
+//.app-enter-header-name>div:first-child {
+//  margin-left: 0;
+//}
+
+//.app-enter-header-name {
+//  padding-left: 10px;
+//}
+
+//toast样式
+.mui-toast-container {
+  bottom: 50%;/*离布局底部的距离*/
+}
+
+.mui-toast-message {
+  width: 180px; /*toast宽度*/
+}
+

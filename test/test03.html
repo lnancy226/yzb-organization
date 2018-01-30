@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./bootstrap-table/src/bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap-table/src/bootstrap-table.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <style>
+    .up,
+    .down {
+      width: 20px;
+      display: inline-block;
+      margin: 0 3px;
+    }
+
+    .main .body .breadcrumb {
+      border: 0;
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+
+    .breadcrumb li,
+    .breadcrumb a {
+      color: #3b5279;
+    }
+
+    .circle {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #3b5279;
+      margin-right: 10px;
+    }
+
+    .panel-body {
+      padding: 10px;
+    }
+
+    .panel>.panel-body+.table {
+      border-top: 2px solid #3b5279;
+    }
+
+    .table tr th {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .table tr {
+      margin: 8px 0;
+    }
+
+    .table>tbody>tr>td {
+      font-size: 16px;
+      color: #666;
+      padding: 12px;
+    }
+
+    .table>tbody .recommend {
+      color: #d04424;
+      margin-right: 20px;
+    }
+
+    .table>tbody .closed {
+      color: #c89355;
+      margin-right: 20px;
+    }
+
+    .table>tbody .details {
+      color: #3b5279;
+    }
+
+    .pagination>.active>a {
+      background-color: #3b5279;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="container-fluid">
+      <!-- <?php include './common/header.html'; ?> -->
+      <!-- 讲师列表 -->
+      <div class="body user-list">
+        <!-- 面包屑 -->
+        <!-- <ol class="breadcrumb">
+                    <li><a href="javascript:;">用户管理</a></li>
+                    <li class="active">用户列表</li>
+                </ol> -->
+        <!-- <div class="page-title">
+                    <a href="#" class="btn btn-success btn-sm pull-right">添加用户</a>
+                </div> -->
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form action="" class="form-inline">
+              <!-- <div class="input-group">
+                                <input type="text" class="form-control input-sm">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success btn-sm">搜索</button>
+                                </span>
+                            </div> -->
+              <ol class="breadcrumb">
+                <span class="circle"></span>
+                <li>
+                  <a href="javascript:;">店铺</a>
+                </li>
+                <!-- <li class="active">全部店铺</li> -->
+                <li>全部店铺</li>
+              </ol>
+            </form>
+          </div>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>店铺名称</th>
+                <th>联系方式</th>
+                <th>排序</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>黑果冻的店</td>
+                <td>12345678900</td>
+                <td>
+                  <img class="up" src="./images/up.png" alt="">
+                  <img class="down" src="./images/down.png" alt="">
+                </td>
+
+                <td>
+                  <span class="recommend">设为推荐</span>
+                  <span class="closed">关闭店铺</span>
+                  <span class="details">查看详情</span>
+                </td>
+
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>黑果冻的店</td>
+                <td>12345678900</td>
+                <td>
+                  <img class="up" src="./images/up.png" alt="">
+                  <img class="down" src="./images/down.png" alt="">
+                </td>
+
+                <td>
+                  <span class="recommend">设为推荐</span>
+                  <span class="closed">关闭店铺</span>
+                  <span class="details">查看详情</span>
+                </td>
+
+              </tr>
+              <tr>
+                <td>003</td>
+                <td>黑果冻的店</td>
+                <td>12345678900</td>
+                <td>
+                  <img class="up" src="./images/up.png" alt="">
+                  <img class="down" src="./images/down.png" alt="">
+                </td>
+
+                <td>
+                  <span class="recommend">设为推荐</span>
+                  <span class="closed">关闭店铺</span>
+                  <span class="details">查看详情</span>
+                </td>
+
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>黑果冻的店</td>
+                <td>12345678900</td>
+                <td>
+                  <img class="up" src="./images/up.png" alt="">
+                  <img class="down" src="./images/down.png" alt="">
+                </td>
+
+                <td>
+                  <span class="recommend">设为推荐</span>
+                  <span class="closed">关闭店铺</span>
+                  <span class="details">查看详情</span>
+                </td>
+
+              </tr>
+              <tr>
+                <td>005</td>
+                <td>黑果冻的店</td>
+                <td>12345678900</td>
+                <td>
+                  <img class="up" src="./images/up.png" alt="">
+                  <img class="down" src="./images/down.png" alt="">
+                </td>
+
+                <td>
+                  <span class="recommend">设为推荐</span>
+                  <span class="closed">关闭店铺</span>
+                  <span class="details">查看详情</span>
+                </td>
+
+              </tr>
+              <tr>
+                <td>006</td>
+                <td>黑果冻的店</td>
+                <td>12345678900</td>
+                <td>
+                  <img class="up" src="./images/up.png" alt="">
+                  <img class="down" src="./images/down.png" alt="">
+                </td>
+
+                <td>
+                  <span class="recommend">设为推荐</span>
+                  <span class="closed">关闭店铺</span>
+                  <span class="details">查看详情</span>
+                </td>
+
+              </tr>
+              <tr>
+                <td>007</td>
+                <td>黑果冻的店</td>
+                <td>12345678900</td>
+                <td>
+                  <img class="up" src="./images/up.png" alt="">
+                  <img class="down" src="./images/down.png" alt="">
+                </td>
+
+                <td>
+                  <span class="recommend">设为推荐</span>
+                  <span class="closed">关闭店铺</span>
+                  <span class="details">查看详情</span>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 分页 -->
+        <!-- <ul class="pagination pull-right">
+            <li><a href="#">上一页</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">下一页</a></li>
+          </ul> -->
+        <div class="dataTables_paginate paging_simple_numbers pull-right" id="DataTables_Table_0_paginate">
+          <ul class="pagination">
+            <li class="paginate_button previous disabled" aria-controls="DataTables_Table_0" tabindex="0" id="DataTables_Table_0_previous">
+              <a href="#">上一页</a>
+            </li>
+            <li class="paginate_button active" aria-controls="DataTables_Table_0" tabindex="0">
+              <a href="#">1</a>
+            </li>
+            <li class="paginate_button " aria-controls="DataTables_Table_0" tabindex="0">
+              <a href="#">2</a>
+            </li>
+            <li class="paginate_button " aria-controls="DataTables_Table_0" tabindex="0">
+              <a href="#">3</a>
+            </li>
+            <li class="paginate_button " aria-controls="DataTables_Table_0" tabindex="0">
+              <a href="#">4</a>
+            </li>
+            <li class="paginate_button " aria-controls="DataTables_Table_0" tabindex="0">
+              <a href="#">5</a>
+            </li>
+            <li class="paginate_button " aria-controls="DataTables_Table_0" tabindex="0">
+              <a href="#">6</a>
+            </li>
+            <li class="paginate_button next" aria-controls="DataTables_Table_0" tabindex="0" id="DataTables_Table_0_next">
+              <a href="#">下一页</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="./bootstrap-table/src/jquery.min.js"></script>
+  <script src="./bootstrap-table/src/bootstrap.min.js"></script>
+  <script src="./bootstrap-table/src/bootstrap-table.js"></script>
+  <!-- put your locale files after bootstrap-table.js -->
+  <script src="./bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
+  <script src="./assets/artTemplate/template-web.js"></script>
+
+
+</body>
+
+</html>

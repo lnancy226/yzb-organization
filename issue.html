@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发布消息</title>
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/issue.css">
+    <style>
+        /******图片上传******/
+        #fileBox{margin:1rem 0;}
+        #fileBox label{display:block;float:left;height:50px;width:50px;background:url(./img/issue.png) no-repeat center;}
+        #fileBox .file-btn{height:50px;width:50px;margin:0 .5rem .5rem 0;opacity:0;}
+        #fileBox .review-box{display:block;float:left;}
+        #fileBox .review-box img{height:50px;width:50px;margin:0 .5rem .5rem 0;}
+        #fileBox .prev-item{position:relative;display:inline-block;}
+        #fileBox .prev-item .closebtn{position:absolute;right: -1px;top: -4px;display: block;height: 14px;width: 14px;color: #fff;font-size: 16px;line-height:14px; text-align: center;background: red;border-radius: 10px;}
+        /******图片上传******/
+    </style>
+</head>
+<body>
+<header id="header" class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span class="back">返回</span></a>
+    <h1 class="mui-title">发布消息</h1>
+    <a href="#" class="mui-btn mui-btn-link mui-pull-right">发布</a>
+</header>
+<div class="mui-content">
+<!--<form id="form1" runat="server">-->
+    <!--<textarea name="" id="" placeholder="请输入发布内容"></textarea><br>-->
+    <!--<input id="app-upload-img" type="file" accept="image/*" multiple style="display: none;">-->
+    <!--<div id="app-camera" onclick="getElementById('app-upload-img').click()"><img src="./img/issue.png" alt=""-->
+                                                                                 <!--style="width: 60px;height:60px;"></div>-->
+    <!--<div>-->
+        <!--<img id="blah" src="#"/>-->
+    <!--</div>-->
+<!--</form>-->
+    <!--选择图片上传-->
+    <div class="form-group">
+        <label>
+            <strong style="color:#FF0000;">&nbsp;</strong>执照图片：
+        </label>
+        <!--<label class="openflag"><input type="checkbox" class="hidden" value="" />不公开</label>-->
+        <div class="file-box clearboth" id="fileBox">
+            <!--克隆的节点-->
+            <label class="clone-dom" style="display:none;"><input type="file" class="file-btn" name="img[]"/></label>
+            <!--克隆的节点-->
+
+            <div class="review-box"></div>
+            <label><input type="file" class="file-btn clone-dom" name="img[]"/></label>
+        </div>
+    </div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/mui.min.js"></script>
+
+    <script>
+    //获取文件url
+    function createObjectURL(blob){
+        if (window.URL){
+            return window.URL.createObjectURL(blob);
+        } else if (window.webkitURL){
+            return window.webkitURL.createObjectURL(blob);
+        } else {
+            return null;
+        }
+    }
+
+    var box = $("#fileBox .review-box");    //显示图片box
+    var file = $("#file"); //file对象
+    var domFragment =  document.createDocumentFragment();   //文档流优化多次改动dom
+
+    $("#fileBox").on("click", ".file-btn",function(){
+        var index = $(this).parent().index();
+        if(index == 6){
+            alert("最多可以上传4张图片！");
+            return false;
+        }
+    });
+    //触发选中文件事件
+    $("#fileBox").on("change", ".file-btn", function(event){
+        var imgNum = parseInt($("#fileBox .review-box img").length);
+        if(imgNum < 4){
+            var file = event.target.files;  //获取选中的文件对象
+            var imgTag = $("<img src=''/>");
+            var fileName = file[0].name;    //获取当前文件的文件名
+            var url = createObjectURL(file[0]); //获取当前文件对象的URL
+            //忽略大小写
+            var jpg = (fileName.indexOf(".jpg") > -1) || (fileName.toLowerCase().indexOf(".jpg") > -1);
+            var png = (fileName.indexOf(".png") > -1) || (fileName.toLowerCase().indexOf(".png") > -1);
+            var jpeg = (fileName.indexOf(".jpeg") > -1) || (fileName.toLowerCase().indexOf(".jpeg") > -1);
+
+            //判断文件是否是图片类型
+            if(jpg || png || jpeg){
+                imgTag.attr("src",url);
+            }else{
+                alert("请选择图片类型文件！");
+            }
+
+            //最佳显示
+            var imgbox = $("<div class='prev-item'><span class='closebtn'>×</span></div>");
+            imgbox.append(imgTag);
+            box.append(imgbox);
+            event.target.parentNode.style.display = "none";
+            var cloneDom = $(".clone-dom").eq(0).clone().removeAttr("style");
+            $("#fileBox").append(cloneDom);
+        }
+    });
+
+    $(".review-box").on("click", ".prev-item", function(){
+        var index = $(this).index();
+        $(this).remove();
+        $("#fileBox label:eq(" + (index + 1) + ")").remove();
+    });
+</script>
+<!--选择图片上传-->
+
+</body>
+</html>

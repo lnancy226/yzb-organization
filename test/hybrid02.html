@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hybrid联调</title>
+</head>
+<body>
+<input type="button" id="senMessage" value="向oc发消息" />
+<input type="button" id="callbackButton" value="js调用oc方法"/>
+<!--<input type="button" value="hybrid交互" onclick="jsBridge()" />-->
+
+<script>
+    function connectWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) {
+            callback(WebViewJavascriptBridge)
+        } else {
+            document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                callback(WebViewJavascriptBridge)
+            }, false)
+        }
+    }
+
+    connectWebViewJavascriptBridge(function(bridge) {
+        /* Init your app here */
+        bridge.init(function(message, responseCallback) {
+            alert('Received message: ' + message)
+            if (responseCallback) {
+                responseCallback("Right back atcha")
+            }
+        })
+        // 向oc发消息
+//        bridge.send('Hello from the javascript')
+//        bridge.send('response to xxx', function responseCallback(responseData) {
+//            console.log("Javascript got its response", responseData)
+//        })
+
+        var senMessageButton = document.getElementById('senMessage');
+        senMessageButton.onclick = function(e) {
+            e.preventDefault()
+            bridge.send('response to xxx', function responseCallback(responseData) {
+                console.log("Javascript got its response", responseData)
+            })
+        }
+        // js调用oc方法
+        var callbackButton = document.getElementById('callbackButton');
+        callbackButton.onclick = function(e) {
+            e.preventDefault()
+            bridge.callHandler('showChat', {qdId:'100005'}, function(response) {
+                console.log('JS got response', response)
+            })
+        }
+        // oc调用js方法
+        bridge.registerHandler('callJS', function(data, responseCallback) {
+            var responseData = { 'Javascript Says':'Right back atcha!' }
+            console.log('JS responding with', responseData)
+            responseCallback(responseData)
+        })
+    })
+</script>
+</body>
+</html>

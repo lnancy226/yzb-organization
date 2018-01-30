@@ -22,9 +22,20 @@
 html {
   background-color: #eee;
 }
+.mui-title {
+  font-size: 1.2rem;
+}
+/* 入驻 */
+.mui-bar .mui-btn-link {
+  font-size: 1.06666667rem;
+  color: #333;
+}
 .mui-content {
   background-color: #eee;
-  margin-bottom: 0.66666667rem;
+  margin-bottom: 1.66666667rem;
+}
+.hide {
+  display: none;
 }
 /* header */
 .mui-bar-nav {
@@ -34,5 +45,18 @@ html {
   color: #333;
 }
 .back {
-  font-size: 17px;
+  font-size: 1.06666667rem;
+}
+#close {
+  line-height: 44px;
+  font-size: 1.06666667rem;
+  color: #333;
+  margin-left: 10px;
+}
+.mui-title {
+  width: 120px;
+}
+.mui-bar .mui-title {
+  width: 120px;
+  margin: 0 auto;
 }

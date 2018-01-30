@@ -22,9 +22,20 @@
 html {
   background-color: #eee;
 }
+.mui-title {
+  font-size: 1.2rem;
+}
+/* 入驻 */
+.mui-bar .mui-btn-link {
+  font-size: 1.06666667rem;
+  color: #333;
+}
 .mui-content {
   background-color: #eee;
-  margin-bottom: 0.66666667rem;
+  margin-bottom: 1.66666667rem;
+}
+.hide {
+  display: none;
 }
 /* header */
 .mui-bar-nav {
@@ -34,7 +45,20 @@ html {
   color: #333;
 }
 .back {
-  font-size: 17px;
+  font-size: 1.06666667rem;
+}
+#close {
+  line-height: 44px;
+  font-size: 1.06666667rem;
+  color: #333;
+  margin-left: 10px;
+}
+.mui-title {
+  width: 120px;
+}
+.mui-bar .mui-title {
+  width: 120px;
+  margin: 0 auto;
 }
 .app-enter-header-name .my-info {
   padding-left: 1rem;
@@ -68,28 +92,72 @@ html {
   border: 0;
   background-color: #d04424;
   font-size: 1.4rem;
-  color: #fff;
+  color: #d04424;
+  margin-top: 0.66666667rem;
+}
+.mui-poppicker-header .mui-poppicker-btn-cancel {
+  background: url(../img/cancel.png) no-repeat 0 0;
+  background-size: 1.13333333rem 1.13333333rem;
+  width: 1.13333333rem;
+  height: 1.13333333rem;
+  margin-left: 0.5rem;
+}
+.mui-poppicker-header .mui-poppicker-btn-ok {
+  width: 1.86666667rem;
+  height: 1.26666667rem;
+  background: url(../img/conform.png) no-repeat 0 0;
+  background-size: 1.86666667rem 1.26666667rem;
+  margin-right: 0.5rem;
 }
 .mui-picker {
   background-color: #fff;
 }
 /*** 机构入驻 ***/
+.app-enter-header-name {
+  font-size: 1.06666667rem;
+}
 #app-detail-address {
   height: auto;
 }
 .app-jigou-jianjie {
   height: 3.33333333rem;
   line-height: 3.33333333rem;
+  font-size: 1.06666667rem;
 }
 #detail-address {
   margin-bottom: 0;
 }
 #app-camera {
+  position: relative;
   margin: 0;
+  width: auto;
+  height: auto;
+}
+#blah {
+  position: absolute;
+  right: 2.83333333rem;
+  top: 0.26666667rem;
+  height: 2.26666667rem;
+  width: auto;
 }
 .app-jigou-message {
   padding: 0.8rem;
 }
 .app-jigou-message textarea {
   padding: 0;
+}
+.app-submit {
+  width: 100%;
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.66666667rem;
+}
+.mui-toast-container {
+  bottom: 50%;
+  /*离布局底部的距离*/
+}
+.mui-toast-message {
+  width: 180px;
+  /*toast宽度*/
 }

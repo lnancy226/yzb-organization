@@ -49,7 +49,7 @@
 		init: function(options) {
 			var self = this;
 			self.options = options || {};
-			self.options.buttons = self.options.buttons || ['×', '√'];
+			self.options.buttons = self.options.buttons || ['', ''];
 			self.panel = $.dom(panelBuffer)[0];
 			document.body.appendChild(self.panel);
 			self.ok = self.panel.querySelector('.mui-poppicker-btn-ok');
@@ -118,6 +118,7 @@
 					items.push(picker.getSelectedItem() || {});
 				}
 			}
+			console.log(items,"items");
 			return items;
 		},
 		//显示
